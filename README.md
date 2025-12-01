@@ -81,7 +81,7 @@ O sistema possui interfaces visuais para as seguintes funcionalidades:
 
 | Componente | Tecnologias |
 | :--- | :--- |
-| **Frontend** | React.js (Web), React Native (Mobile) |
+| **Frontend** | React.js (Web) |
 | **Backend** | Node.js, Express.js |
 | **Banco de Dados** | PostgreSQL |
 | **APIs Externas** | Groq Cloud (IA), OpenWeatherMap (Clima) |
