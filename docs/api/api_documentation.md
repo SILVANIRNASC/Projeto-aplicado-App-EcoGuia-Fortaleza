@@ -2,7 +2,7 @@
 
 Esta documentação descreve os endpoints da API **RESTful** do EcoGuia. A API foi desenvolvida em **Node.js com Express** e utiliza banco de dados **PostgreSQL**.
 
-**Base URL Local:** `http://localhost:3000/api`
+**Base URL Local:** `http://localhost:3008/api`
 
 ---
 
