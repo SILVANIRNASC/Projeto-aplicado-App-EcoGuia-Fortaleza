@@ -172,7 +172,44 @@ Para validar o funcionamento das rotas da API e regras de negócio, execute os t
 3. Execute o comando de teste:
    ```bash
    npx jest
-   
+
+## 🗄️ Configuração do Banco de Dados
+
+O sistema utiliza **PostgreSQL** e requer a criação de tabelas específicas para usuários, gamificação, plantas e ecopontos.
+
+### 1. Criar o Banco de Dados
+Abra seu terminal ou gerenciador de banco de dados (pgAdmin/DBeaver) e crie um banco chamado `ecoguia_db`:
+
+```sql
+CREATE DATABASE ecoguia_db;
+
+### 2. Popular o Banco (Executar Schema)
+
+O arquivo database/schema.sql contém toda a estrutura e os dados iniciais (Ecopontos de Fortaleza e Conquistas). Execute-o para configurar as tabelas:
+
+Via Terminal:
+
+```bash
+psql -U seu_usuario -d ecoguia_db -f database/schema.sql
+
+Via Interface (pgAdmin/DBeaver):
+
+Conecte-se ao banco ecoguia_db.
+
+Abra uma ferramenta de consulta (Query Tool).
+
+Copie o conteúdo do arquivo database/schema.sql.
+
+Cole e execute o script completo.
+
+Nota: O script já inclui dados reais de 95 Ecopontos de Fortaleza e as regras de Gamificação (Conquistas).
+
+### 3. Configurar Variáveis de Ambiente
+
+No arquivo .env dentro da pasta backend, certifique-se de que a conexão está apontando para o banco criado:
+
+DATABASE_URL=postgres://seu_usuario:sua_senha@localhost:5432/ecoguia_db
+
 
 ## 6. Acesso ao Sistema (Deploy)
 O sistema está hospedado e acessível publicamente:
