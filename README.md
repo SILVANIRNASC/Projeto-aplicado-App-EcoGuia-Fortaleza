@@ -173,44 +173,56 @@ Para validar o funcionamento das rotas da API e regras de negócio, execute os t
    ```bash
    npx jest
 
-## 🗄️ Configuração do Banco de Dados
+***
 
-O sistema utiliza **PostgreSQL** e requer a criação de tabelas específicas para usuários, gamificação, plantas e ecopontos.
+# 🗄️ Configuração do Banco de Dados PostgreSQL (Ecoguia)
 
-### 1. Criar o Banco de Dados
-Abra seu terminal ou gerenciador de banco de dados (pgAdmin/DBeaver) e crie um banco chamado `ecoguia_db`:
+O sistema **Ecoguia** utiliza o **PostgreSQL** como banco de dados. É essencial a criação de tabelas específicas que gerenciam usuários, gamificação, plantas e ecopontos.
+
+## 1. Criar o Banco de Dados
+
+Para iniciar, crie o banco de dados principal. Você pode fazer isso via terminal ou utilizando um gerenciador de banco de dados (como pgAdmin ou DBeaver).
+
+O nome do banco de dados a ser criado é `ecoguia_db`.
 
 ```sql
 CREATE DATABASE ecoguia_db;
+```
 
-### 2. Popular o Banco (Executar Schema)
+## 2. Popular o Banco (Executar Schema)
 
-O arquivo database/schema.sql contém toda a estrutura e os dados iniciais (Ecopontos de Fortaleza e Conquistas). Execute-o para configurar as tabelas:
+O arquivo `database/schema.sql` contém toda a estrutura das tabelas e os **dados iniciais** necessários. Você deve executar este arquivo para configurar as tabelas.
 
-Via Terminal:
+**Nota:** O script já inclui dados reais de **95 Ecopontos de Fortaleza** e todas as regras de Gamificação (Conquistas).
+
+### Via Terminal
+
+Utilize o comando `psql`, substituindo `seu_usuario` pelo seu usuário do PostgreSQL:
 
 ```bash
 psql -U seu_usuario -d ecoguia_db -f database/schema.sql
+```
 
-Via Interface (pgAdmin/DBeaver):
+### Via Interface (pgAdmin/DBeaver)
 
-Conecte-se ao banco ecoguia_db.
+Se preferir usar uma interface gráfica:
 
-Abra uma ferramenta de consulta (Query Tool).
+1. Conecte-se ao banco de dados `ecoguia_db`.
+2. Abra uma ferramenta de consulta (Query Tool).
+3. Copie o conteúdo completo do arquivo `database/schema.sql`.
+4. Cole e execute o script para popular o banco.
 
-Copie o conteúdo do arquivo database/schema.sql.
+## 3. Configurar Variáveis de Ambiente
 
-Cole e execute o script completo.
+Após a criação e população do banco de dados, é necessário configurar a conexão no sistema.
 
-Nota: O script já inclui dados reais de 95 Ecopontos de Fortaleza e as regras de Gamificação (Conquistas).
+Dentro da pasta `backend`, localize o arquivo `.env`. Certifique-se de que a variável `DATABASE_URL` esteja apontando corretamente para o banco criado (`ecoguia_db`), substituindo `seu_usuario` e `sua_senha` pelas suas credenciais:
 
-### 3. Configurar Variáveis de Ambiente
-
-No arquivo .env dentro da pasta backend, certifique-se de que a conexão está apontando para o banco criado:
-
+```env
 DATABASE_URL=postgres://seu_usuario:sua_senha@localhost:5432/ecoguia_db
+```
 
-
+```
 ## 6. Acesso ao Sistema (Deploy)
 O sistema está hospedado e acessível publicamente:
 
