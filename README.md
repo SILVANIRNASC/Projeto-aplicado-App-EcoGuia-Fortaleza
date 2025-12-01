@@ -128,7 +128,7 @@ O sistema adota uma arquitetura **Cliente-Servidor baseada em API RESTful**.
     ```bash
     cd ../frontend/web
     npm install
-    npm start
+    npm run dev
     ```
 
 ### Variáveis de Ambiente (`.env` do Backend)
@@ -136,12 +136,27 @@ Estas variáveis devem ser definidas na raiz da pasta `backend` para a execuçã
 
 ```env
 PORT=3000
-DATABASE_URL=postgres://usuario:senha@localhost:5432/ecoguia_db
-GROQ_API_KEY=sua_chave_aqui
-OPENWEATHER_API_KEY=sua_chave_aqui
-JWT_SECRET=sua_chave_secreta
-```
 
+Chave da API da Groq (obrigatória)
+Obtenha em: https://console.groq.com/keys
+GROQ_API_KEY="sua_chave_api_aqui"
+
+Chave da API do OpenWeatherMap
+Obtenha em: https://home.openweathermap.org/api_keys
+OPENWEATHER_API_KEY="sua_chave_api_aqui"
+
+Coordenadas de Fortaleza para a API de clima
+LAT_FORTALEZA=-3.7327
+LON_FORTALEZA=-38.5267
+
+DB_USER=postgres
+DB_HOST=localhost
+DB_DATABASE=ecoguia_db
+DB_PASSWORD=sua_senha
+DB_PORT=5432
+
+JWT_SECRET=o_segredo_que_voce_escolher
+```
 ---
 
 ## 6. Acesso ao Sistema (Deploy)
