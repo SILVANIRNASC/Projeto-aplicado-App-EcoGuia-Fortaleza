@@ -41,16 +41,40 @@ O projeto visa resolver a **gestão ineficiente de resíduos sólidos e a descon
     *   Listagem de mutirões e workshops com confirmação de presença.
 
 ### 📸 Screenshots
-O sistema possui interfaces visuais para:
-*   Dashboard Gamificado
-*   EcoAssistente (Chatbot)
-*   Jardim e Monitoramento
-*   Busca de Descarte
-*   Clima Inteligente
-*   Agenda de Eventos
 
-*(Nota: Substitua os itens acima pelos prints reais do seu sistema)*
+O sistema possui interfaces visuais para as seguintes funcionalidades:
 
+---
+
+## 🏆 Dashboard Gamificado
+![Dashboard Gamificado](./screenshots/telainical.jpeg)
+
+---
+
+## 🤖 EcoAssistente (Chatbot)
+![EcoAssistente](./screenshots/telachatbot.jpeg)
+
+---
+
+## 🌿 Jardim e Monitoramento
+![Jardim e Monitoramento](./screenshots/telajardinagem.jpeg)
+
+---
+
+## 🔎 Busca de Descarte
+![Busca de Descarte](./screenshots/teladescarte.jpeg)
+
+---
+
+## ☁️ Clima Inteligente
+![Clima Inteligente](./screenshots/telaclima.jpeg)
+
+---
+
+## 📅 Agenda de Eventos
+![Agenda de Eventos](./screenshots/telaeventos.jpeg)
+
+---
 ---
 
 ## 3. Tecnologias Utilizadas
