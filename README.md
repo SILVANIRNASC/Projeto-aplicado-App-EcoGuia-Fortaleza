@@ -113,7 +113,7 @@ O sistema adota uma arquitetura **Cliente-Servidor baseada em API RESTful**.
 
 2.  **Acessar o diretório principal:**
     ```bash
-    cd eco-guia-fortaleza
+    cd Projeto-aplicado-App-EcoGuia-Fortaleza
     ```
 
 3.  **Configurar Backend:**
