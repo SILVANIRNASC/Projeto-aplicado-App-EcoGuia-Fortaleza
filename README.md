@@ -170,6 +170,7 @@ Para validar o funcionamento das rotas da API e regras de negócio, execute os t
    ```bash
    cd backend
 3. Execute o comando de teste:
+   ```bash
    npx jest
    
 
