@@ -121,7 +121,7 @@ O sistema adota uma arquitetura **Cliente-Servidor baseada em API RESTful**.
     cd backend
     npm install
     # Crie um arquivo .env na raiz do backend com as variáveis abaixo
-    npm run dev
+    npm start
     ```
 
 4.  **Configurar Frontend:**
