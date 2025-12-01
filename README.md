@@ -159,6 +159,20 @@ JWT_SECRET=o_segredo_que_voce_escolher
 ```
 ---
 
+## 🧪 Executando os Testes Automatizados
+
+Para validar o funcionamento das rotas da API e regras de negócio, execute os testes automatizados utilizando o Jest.
+
+**Passo a passo:**
+
+1. Abra o terminal na raiz do projeto.
+2. Acesse a pasta do servidor:
+   ```bash
+   cd backend
+3. Execute o comando de teste:
+   npx jest
+   
+
 ## 6. Acesso ao Sistema (Deploy)
 O sistema está hospedado e acessível publicamente:
 
