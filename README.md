@@ -174,6 +174,31 @@ Para validar o funcionamento das rotas da API e regras de negócio, execute os t
    npx jest
 
 ``
+### 🗄️ Configuração do Banco de Dados (PostgreSQL)
+
+O projeto utiliza um banco de dados relacional PostgreSQL. Siga os passos abaixo para criar a estrutura necessária:
+
+1.  **Crie o Banco de Dados:**
+    Abra o seu terminal (ou pgAdmin) e crie um banco com o nome `ecoguia_db`:
+    ```sql
+    CREATE DATABASE ecoguia_db;
+    ```
+
+2.  **Importe as Tabelas (Schema):**
+    Utilize o arquivo SQL que está na pasta `database/` para criar as tabelas automaticamente.
+    * **Via Terminal:**
+        ```bash
+        psql -U seu_usuario -d ecoguia_db -f database/schema.sql
+        ```
+    * **Via pgAdmin/DBeaver:**
+        Abra a ferramenta, conecte-se ao banco `ecoguia_db`, abra uma *Query Tool*, copie o conteúdo do arquivo `database/schema.sql` e execute (Play).
+
+3.  **Conecte o Backend:**
+    Certifique-se de que o seu arquivo `.env` na pasta `backend` aponta para este banco:
+    ```env
+    DATABASE_URL=postgres://usuario:senha@localhost:5432/ecoguia_db
+    ```
+
 ## 6. Acesso ao Sistema (Deploy)
 O sistema está hospedado e acessível publicamente:
 
