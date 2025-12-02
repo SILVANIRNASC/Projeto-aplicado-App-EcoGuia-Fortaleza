@@ -174,15 +174,23 @@ Para validar o funcionamento das rotas da API e regras de negócio, execute os t
    npx jest
 
 ```
----
+Com base nas suas fontes, ajustei a formatação do conteúdo para Markdown (mk), tornando-o adequado para ser colado diretamente em um ambiente como o GitHub (por exemplo, um arquivo `README.md` ou documentação).
+
+**Observação:** As citações de fonte (ex:,) foram inseridas no texto em Markdown conforme solicitado.
+
+```markdown
+# EcoGuia: Acesso, Validação e Ajustes Finais
 
 ## 6. Acesso ao Sistema (Deploy)
+
 O sistema está hospedado e acessível publicamente:
 
 ### 🔗 Acesse aqui:
+
 [https://ecoguia-front.vercel.app/](https://ecoguia-front.vercel.app/)
 
 ### Credenciais de Teste:
+
 *   **Login:** teste@teste.com
 *   **Senha:** 123456
 
@@ -247,3 +255,4 @@ Para comprovar a realização dos testes, disponibilizamos as fotos e autorizaç
 | Isadora Ianne Aguiar | 2323864 | Validação e QA |
 | Luiz Henrique | 202400004 | Desenvolvimento Frontend e UX/UI |
 | Silvanir Nascimento | 2326784 | Análise de Requisitos e Documentação |
+```
