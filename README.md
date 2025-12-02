@@ -173,56 +173,9 @@ Para validar o funcionamento das rotas da API e regras de negócio, execute os t
    ```bash
    npx jest
 
-***
-
-# 🗄️ Configuração do Banco de Dados PostgreSQL (Ecoguia)
-
-O sistema **Ecoguia** utiliza o **PostgreSQL** como banco de dados. É essencial a criação de tabelas específicas que gerenciam usuários, gamificação, plantas e ecopontos.
-
-## 1. Criar o Banco de Dados
-
-Para iniciar, crie o banco de dados principal. Você pode fazer isso via terminal ou utilizando um gerenciador de banco de dados (como pgAdmin ou DBeaver).
-
-O nome do banco de dados a ser criado é `ecoguia_db`.
-
-```sql
-CREATE DATABASE ecoguia_db;
 ```
+---
 
-## 2. Popular o Banco (Executar Schema)
-
-O arquivo `database/schema.sql` contém toda a estrutura das tabelas e os **dados iniciais** necessários. Você deve executar este arquivo para configurar as tabelas.
-
-**Nota:** O script já inclui dados reais de **95 Ecopontos de Fortaleza** e todas as regras de Gamificação (Conquistas).
-
-### Via Terminal
-
-Utilize o comando `psql`, substituindo `seu_usuario` pelo seu usuário do PostgreSQL:
-
-```bash
-psql -U seu_usuario -d ecoguia_db -f database/schema.sql
-```
-
-### Via Interface (pgAdmin/DBeaver)
-
-Se preferir usar uma interface gráfica:
-
-1. Conecte-se ao banco de dados `ecoguia_db`.
-2. Abra uma ferramenta de consulta (Query Tool).
-3. Copie o conteúdo completo do arquivo `database/schema.sql`.
-4. Cole e execute o script para popular o banco.
-
-## 3. Configurar Variáveis de Ambiente
-
-Após a criação e população do banco de dados, é necessário configurar a conexão no sistema.
-
-Dentro da pasta `backend`, localize o arquivo `.env`. Certifique-se de que a variável `DATABASE_URL` esteja apontando corretamente para o banco criado (`ecoguia_db`), substituindo `seu_usuario` e `sua_senha` pelas suas credenciais:
-
-```env
-DATABASE_URL=postgres://seu_usuario:sua_senha@localhost:5432/ecoguia_db
-```
-
-```
 ## 6. Acesso ao Sistema (Deploy)
 O sistema está hospedado e acessível publicamente:
 
@@ -277,6 +230,7 @@ Foram implementados ajustes imediatos e planejamento futuro.
 | **Futuro/Sugestão** | A funcionalidade de "**Fórum Comunitário**" (grupos/comunidades sugeridos) foi planeada para a **versão 2.0**. | ⚠️ Backlog | |
 
 ### 📸 Evidências Fotográficas
+
 Para comprovar a realização dos testes, disponibilizamos as fotos e autorizações na pasta de evidências.
 
 📂 **[CLIQUE AQUI PARA ABRIR A PASTA DE EVIDÊNCIAS (FOTOS)](./validation/evidence/)**
@@ -293,4 +247,3 @@ Para comprovar a realização dos testes, disponibilizamos as fotos e autorizaç
 | Isadora Ianne Aguiar | 2323864 | Validação e QA |
 | Luiz Henrique | 202400004 | Desenvolvimento Frontend e UX/UI |
 | Silvanir Nascimento | 2326784 | Análise de Requisitos e Documentação |
-```
